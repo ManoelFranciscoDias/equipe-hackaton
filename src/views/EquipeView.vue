@@ -35,10 +35,12 @@ export default {
 </script>
 
 <template>
-    <div>
-        <h1>Equipe</h1>
-        <ul>
+    <div class="container">
+        
+        <ul >
+            <h1>Equipe</h1>
             <li v-for="membro in equipe" :key="membro.nome">
+                
                 <h2>{{ membro.nome }}</h2>
                 <p>{{ membro.cargo }}</p>
             </li>
@@ -47,5 +49,17 @@ export default {
 </template>
 
 <style scoped>
-/* Your component-specific styles go here */
+body {
+    background-color: blue;
+}
+
+
+.container {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
 </style>
