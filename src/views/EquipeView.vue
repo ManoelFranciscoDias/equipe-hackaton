@@ -1,46 +1,56 @@
 <script>
+
 export default {
     name: 'EquipeView',
     data() {
         return {
             equipe: [
                 {
-                    nome: 'João Pedro Dums (Santos)',
+                    img: '../components/imgs/santos.png',
+                    nome: 'João Pedro Dums',
                     cargo: 'Back-End'
                 },
                 {
-                    nome: 'Matheus Gaspar (Pito)',
+                    img: '../components/imgs/matheus.png',
+                    nome: 'Matheus Gaspar',
                     cargo: 'Back-End / Geral'
                 },
                 {
-                    nome: 'Enrique Cardoso (Doso)',
+                    img: '../components/imgs/enrique.png',
+                    nome: 'Enrique Cardoso',
                     cargo: 'Front-End (auxiliar)'
                 },
                 {
-                    nome: 'Nicolas Sestrem (Kito)',
-                    cargo: 'Figma'
+                    img: "../components/imgs/nicolas.png",
+                    nome: 'Nicolas Sestrem',
+                    cargo: 'Figma',
                 },
                 {
-                    nome: 'Manoel Dias (Nel)',
+                    img: '../components/imgs/manoel.png',
+                    nome: 'Manoel Dias',
                     cargo: 'Front-End (principal)'
                 },
                 {
-                    nome: 'Kaue (Doka)',
+                    img: '../components/imgs/kaue.png',
+                    nome: 'Kaue Ian',
                     cargo: 'RNF, RF, RN'
                 }
             ]
         }
     }
 }
+
 </script>
 
 <template>
     <div class="container">
         
         <ul >
-            <h1>Equipe</h1>
+            <h1 class="titulo">Equipe</h1>
             <li v-for="membro in equipe" :key="membro.nome">
                 
+                <img v-if="membro.img" :src="membro.img" alt="Imagem do membro" width="100" height="100">
+                <img v-else src='../components/imgs/sem-foto.png' alt="Imagem do membro" width="100" height="100">
                 <h2>{{ membro.nome }}</h2>
                 <p>{{ membro.cargo }}</p>
             </li>
@@ -61,5 +71,11 @@ body {
     margin-top: 100px;
 }
 
+.titulo {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 </style>

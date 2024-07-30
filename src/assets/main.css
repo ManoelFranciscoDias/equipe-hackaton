@@ -1,28 +1,28 @@
-@import './base.css';
+
 
 
 body {
-  background: linear-gradient(to right, #000000, #2b8ea0);
+  background: linear-gradient(to right, #bebebe, #efeff0);
 }
 
 h2 {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 p {
-  color: white;
+  color: black;
   font-weight: lighter;
 }
 
 h1 {
-  color: white;
+  color: black;
   font-weight: bold;
   
 }
 
 a {
-  color: white;
+  color: black;
   
   color: black;
   padding: 90px;
