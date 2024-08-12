@@ -5,36 +5,12 @@ export default {
     data() {
         return {
             equipe: [
-                {
-                    img: '../components/imgs/santos.png',
-                    nome: 'João Pedro Dums',
-                    cargo: 'Back-End'
-                },
-                {
-                    img: '../components/imgs/matheus.png',
-                    nome: 'Matheus Gaspar',
-                    cargo: 'Back-End / Geral'
-                },
-                {
-                    img: '../components/imgs/enrique.png',
-                    nome: 'Enrique Cardoso',
-                    cargo: 'Front-End (auxiliar)'
-                },
-                {
-                    img: "../components/imgs/nicolas.png",
-                    nome: 'Nicolas Sestrem',
-                    cargo: 'Figma',
-                },
-                {
-                    img: '../components/imgs/manoel.png',
-                    nome: 'Manoel Dias',
-                    cargo: 'Front-End (principal)'
-                },
-                {
-                    img: '../components/imgs/kaue.png',
-                    nome: 'Kaue Ian',
-                    cargo: 'RNF, RF, RN'
-                }
+                { id: 1, nome: 'João Pedro', img: '../../public/joao.jpeg', cargo: 'Back-End / Auxiliar' },
+                { id: 2, nome: 'Matheus Gaspar', img: '../../public/matheusg.png', cargo: 'Back-End / Geral' },
+                { id: 3, nome: 'Enrique Cardoso', img: '../../public/enrique.jpg', cargo: 'Front-End (auxiliar)' },
+                { id: 4, nome: 'Nicolas Sestrem', img: '../../public/nicolas.jpg', cargo: 'Figma' },
+                { id: 5, nome: 'Manoel Dias', img: '../../public/manoel.png', cargo: 'Front-End (principal)' },
+                { id: 6, nome: 'Kaue Ian', img: '../../public/kaue.jpg', cargo: 'RNF, RF, RN' }
             ]
         }
     }
@@ -44,30 +20,22 @@ export default {
 
 <template>
     <div class="container">
-        
-        <ul >
-            <h1 class="titulo">Equipe</h1>
-            <li v-for="membro in equipe" :key="membro.nome">
-                
-                <img v-if="membro.img" :src="membro.img" alt="Imagem do membro" width="100" height="100">
-                <img v-else src='../components/imgs/sem-foto.png' alt="Imagem do membro" width="100" height="100">
-                <h2>{{ membro.nome }}</h2>
-                <p>{{ membro.cargo }}</p>
-            </li>
-        </ul>
+        <div v-for="membro in equipe" :key="membro.id">
+            <img :src="membro.img" alt="Imagem do membro" width="100" height="100">
+            <p>{{ membro.nome }}</p>
+            <p>{{ membro.cargo }}</p>
+        </div>
     </div>
 </template>
 
 <style scoped>
-body {
-    background-color: blue;
-}
 
 
 .container {
-    
+
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
     margin-top: 100px;
 }
 
@@ -77,5 +45,4 @@ body {
     text-align: center;
     margin-bottom: 50px;
 }
-
 </style>
