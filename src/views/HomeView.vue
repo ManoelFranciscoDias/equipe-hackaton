@@ -7,7 +7,7 @@ export default {
       equipe: [
         { id: 1, nome: 'João Pedro', img: '../src/images/joao.jpeg', cargo: 'Back-End / Auxiliar' },
         { id: 2, nome: 'Matheus Gaspar', img: '../src/images/matheusg.png', cargo: 'Back-End / Geral' },
-        { id: 3, nome: 'Enrique Cardoso', img: '../src/images/enrique.jpg', cargo: 'Front-End (auxiliar)' },
+        { id: 3, nome: 'Enrique Cardoso', img: '../src/images/enrique.jpg', cargo: 'Figma' },
         { id: 4, nome: 'Nicolas Sestrem', img: '../src/images/nicolas.jpg', cargo: 'Figma' },
         { id: 5, nome: 'Manoel Dias', img: '../src/images/manoel.png', cargo: 'Front-End (principal)' },
         { id: 6, nome: 'Kaue Ian', img: '../src/images/kaue.jpg', cargo: 'RNF, RF, RN' }
@@ -52,7 +52,7 @@ header {
 
 .membro img {
   border-radius: 48%;
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
   margin-bottom: 10px;
 }
 
